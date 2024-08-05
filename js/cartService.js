@@ -1,5 +1,5 @@
 function agregarAlCarrito(producto){
-    const MEMORIA = JSON.parse(localStorage.getItem("modulo") || []);
+    const MEMORIA = JSON.parse(localStorage.getItem("modulo"));
     console.log(MEMORIA);
     let cuenta = 0;
     if(!MEMORIA || MEMORIA.length === 0){
