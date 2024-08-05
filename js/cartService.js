@@ -2,7 +2,7 @@ function agregarAlCarrito(producto){
     const MEMORIA = JSON.parse(localStorage.getItem("modulo") || []);
     console.log(MEMORIA);
     let cuenta = 0;
-    if(!MEMORIA){
+    if(!MEMORIA || MEMORIA.length === 0){
         const NUEVO_PRODUCTO = getNuevoProductoParaMemoria(producto);
         NUEVO_PRODUCTO.cantidad = 1;
         localStorage.setItem("modulo",JSON.stringify([NUEVO_PRODUCTO]));
